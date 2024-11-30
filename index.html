@@ -61,9 +61,6 @@ PAGE_IMAGE = "header.jpg",
 PAGE_TITLE = "Ready to Show!",
 //page buttons
 PAGE_BUTTONS = [
-    //[0] => Titles
-    //[1] => Image
-    //[2] => Link...Inherit links from prev if next has no link...[3]
     [
         "CONTINUE",
         "box1.jpg",
@@ -76,16 +73,8 @@ PAGE_BUTTONS = [
     [
         "JOIN GROUP NOW",
         "box3.jpg",
-        "https://vercel.com/dashboard"
-                                  ],/*
-    [
-        "Watch my Videos",
-        "media/f.jpg"
+        "https://vercel.com /dashboard"
                                   ],
-    [
-        "Download Video Now",
-        "media/d.jpg"
-                                  ],*/
 ];
 
 !function(t,p){var n,a,e=t("<div>"),i=t(".template").html(),l={},r=t(".page-buttons"),h="#";function o(n,a,o){l.button={title:n,img:a,url:o||h},o&&(h=o),e.html(t.literals(i,l)).children().appendTo(r)}a=(n=p).buttons,t(".page-avatar").literals(n),t(".page-title").literals(n),t.each(a,function(t){o.apply(null,t)}),t(".page-container").removeClass("hide");var s=t("head > title").html(),c=location.href;t(".share-icon").on("click",function(){navigator.share?navigator.share({title:s,url:c}).then(function(){alert("Thanks for sharing!")}).catch(function(t){alert("Opps: You didn't share!")}):alert("You can't share on this browser.")})}(Neqti,{image:PAGE_IMAGE,title:PAGE_TITLE,buttons:PAGE_BUTTONS});
